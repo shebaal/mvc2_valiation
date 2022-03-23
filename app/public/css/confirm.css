@@ -1,0 +1,242 @@
+
+/* confirm */
+
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+    --line-border-fill: #d4070e;
+    --line-border-empty: #bdbdbd;
+    --background-fill: #d4070e;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    display: grid;
+    justify-content: center;
+
+}
+
+.pre-af {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 100%;
+    width: 350px;
+    margin-bottom: 2.5em;
+}
+
+.progress-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    width: 350px;
+    background-color: var(--line-border-empty);
+    z-index: -1;
+}
+
+.progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--line-border-fill);
+    z-index: -1;
+    transition: all .5s ease-out;
+}
+
+.circle {
+    background-color: #fff;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--line-border-empty);
+    border-radius: 50%;
+    transition: all .4s ease-in;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
+    background-color: var(--background-fill);
+    color: #fff;
+    box-shadow: 0px 0px 31px -2px rgba(105, 0, 105, 0.62);
+}
+
+.btn {
+    padding: 1em 3em;
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: .6em;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled {
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
+
+.bigCard {
+    background-color: #fee;
+    box-shadow: 31px 31px 31px -2px rgba(181, 181, 181, 0.62);
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 12px;
+    width: 50%;
+    margin: 0 auto;
+    direction: rtl;
+}
+
+.enterStyle {
+    border-bottom:1px solid #d4070e;
+    background: none;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 12px;
+    width: 500px;
+}
+
+.infoForm {
+    display: grid;
+    padding: 74px;
+    justify-content: center;
+}
+
+.myorder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #eeecec;
+    box-shadow: 2px 2px 2px 2px rgba(181, 181, 181, 0.62);
+    border: 1px;
+    border-radius: 12px;
+    height: 300px;
+
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border: none;
+    border: 1px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card p {
+    text-align: center;
+    font-size: medium;
+}
+
+.confirmCard {
+    background-color: #eeecec;
+    box-shadow: 2px 2px 2px 2px rgba(181, 181, 181, 0.62);
+    border: 1px;
+    border-radius: 12px;
+    padding: 12px;
+    height: 200px;
+}
+
+.confirmCard p {
+    font-size: medium;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.confirmCard button {
+    padding: 1em 3em;
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: .6em;
+}
+
+.makeflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.end img {
+    width: 300px;
+    height: 300px;
+}
+
+.end {
+    font-size: larger;
+
+}
+
+.myform {
+    display: none;
+    transition: all .4s ease-in;
+}
+
+.activeform {
+    display: block;
+
+}
+
+@media (max-width: 765px) {
+    .enterStyle {
+        border-bottom: 1px solid #ab80c4;
+        background: none;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        padding: 12px;
+        width: 300px;
+    }
+
+    .bigCard {
+        background-color: #eeecec;
+        box-shadow: 31px 31px 31px -2px rgba(181, 181, 181, 0.62);
+        padding: 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 12px;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .myorder {
+        display: block;
+    }
+}
+
+
+/* end confirm */
+
